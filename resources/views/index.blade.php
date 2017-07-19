@@ -1,102 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>首页</title>
-    <link rel="stylesheet" type="text/css" href="{{asset('style/material.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('style/icon-fonts.css')}}">
-    <script src="{{asset('js/material.js')}}"></script>
+@extends('layout.master')
 
+@section('custom-style')
     <style>
-
-        body {
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-
-        .container {
-            width: 1024px;
-            margin: 0 auto;
-            /*background-color: pink;*/
-        }
-
-        .header-layout {
-            background-color: #1976d2;
-        }
-
-        .header-nav {
-            padding: 20px;
-        }
-
-        .header-nav-title {
-            display: inline-block
-        }
-
-        .header-nav-title > small {
-            font-weight: 300;
-            color: white;
-        }
-
-        .nav-title {
-            color: white;
-            font-size: 20pt;
-            font-weight: 300;
-            /*background-color: lightblue;*/
-        }
-
-        /*.spacer {*/
-        /*display: inline-block;*/
-        /*width: 700px;*/
-        /*height: 2px;*/
-        /*!*background: lightgray;*!*/
-        /*}*/
-
-        .nav {
-            display: inline-block;
-            float: right;
-        }
-
-        .nav a {
-            color: white;
-            text-decoration-line: none;
-            /*background-color: lightgray;*/
-            margin-left: 8px;
-            font-weight: lighter;
-            font-size: 8pt;
-            cursor: pointer;
-        }
-
-        .nav a:hover {
-            text-decoration-line: underline;
-        }
-
-        .header-tab {
-            background-color: #1976d2;
-        }
-
-        .mdl-layout__tab {
-            font-weight: 300;
-        }
-
-        .mdl-layout__tab.is-active,
-        .mdl-layout__tab:hover {
-            color: #fff;
-            background-color: #1971cd;
-        }
-
-        .mdl-layout__tab.is-active::after {
-            height: 2px;
-            width: 100%;
-            display: block;
-            content: " ";
-            bottom: 0;
-            left: 0;
-            position: absolute;
-            background: white;
-            -webkit-animation: border-expand 0.2s cubic-bezier(0.4, 0, 0.4, 1) alternate forwards;
-            animation: border-expand 0.2s cubic-bezier(0.4, 0, 0.4, 1) alternate forwards;
-            transition: all 1s cubic-bezier(0.4, 0, 1, 1);
-        }
 
         .left, .right {
             display: inline-block;
@@ -151,7 +56,7 @@
         .post-image {
             width: 100%;
             height: 100%;
-            background: url("{{asset('images/DCsoh3.jpg')}}") no-repeat center;
+            background: url({{asset('images/DCsoh3.jpg')}}) no-repeat center;
             -webkit-background-size: contain;
             -moz-background-size: contain;
             -o-background-size: contain;
@@ -308,259 +213,182 @@
         .button-blue-sky .mdl-ripple {
             background: rgb(255, 255, 255);
         }
-
-        footer {
-            background-color: #2c2c2c;
-            padding: 20px 0;
-            font-weight: 300;
-        }
-
-        footer > .container {
-            color: white;
-        }
-
-        footer > .container > .left > p {
-            font-size: 18pt;
-        }
-
-        footer > .container > .right {
-            height: 82px;
-        }
-
-        .copy-right {
-            position: relative;
-            top: 53%;
-            float: right;
-            text-align: right;
-            font-size: 8pt;
-        }
     </style>
-</head>
-<body>
+    @endsection
 
-<header class="header-layout">
-
-    <div class="header-nav">
+@section('content')
+    <div class="header-post">
         <div class="container">
-            <!-- Title -->
-            <div class="header-nav-title">
-                <span class="nav-title"><?=$site_name ?></span>
-                <br>
-                <small><?=$site_desc ?></small>
-            </div>
+            <section class="post-left">
+                <div class="post-info">
+                    <h3>职业电竞的成功之路</h3>
+                    <p class="mdl-color-text--white">游戏人生，放飞自我，最强王者，我们等你来！<br>consectetur adipiscing elit.Mauris sagittis
+                        pellentesque lacus eleifend lacinia...Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris
+                        sagittis</p>
 
-            <!-- Add spacer, to align navigation to the right -->
-            <!--<div class="spacer"></div>-->
-            <!-- Navigation -->
-            <nav class="nav">
-                <a href="">登录</a>
-                <a href="">立即注册</a>
-                <a href="">企业合作</a>
-                <a href="">关于我们</a>
-            </nav>
-        </div>
-    </div>
+                    <div class="search-box">
+                        <form action="#">
+                            <select title="type" name="type">
+                                <option value="0">职位</option>
+                                <option value="1">新闻</option>
+                            </select>
 
-    <div class="header-tab">
-        <div class="container">
-            <a href="" class="mdl-layout__tab is-active">首页</a>
-            <a href="" class="mdl-layout__tab">个人首页</a>
-            <a href="" class="mdl-layout__tab">职位搜索</a>
-            <a href="" class="mdl-layout__tab">资讯中心</a>
+                            <input type="text" placeholder="输入搜索内容"/>
+                            <button type="submit" class="mdl-button mdl-js-button mdl-button--raised
+                        mdl-js-ripple-effect button-blue-sky">立即搜索
+                            </button>
+                        </form>
+                        <div class="search-box-appendix">
+                            <span>输入职位名称或描述／新闻标题或内容</span>
+                            <a href="#">使用高级搜索</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="post-right">
+                <div class="post-image"></div>
+            </section>
             <div style="clear: both;"></div>
         </div>
     </div>
-</header>
 
-
-<div class="header-post">
     <div class="container">
-        <section class="post-left">
-            <div class="post-info">
-                <h3>职业电竞的成功之路</h3>
-                <p class="mdl-color-text--white">游戏人生，放飞自我，最强王者，我们等你来！<br>consectetur adipiscing elit.Mauris sagittis
-                    pellentesque lacus eleifend lacinia...Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris
-                    sagittis</p>
 
-                <div class="search-box">
-                    <form action="#">
-                        <select title="type" name="type">
-                            <option value="0">职位</option>
-                            <option value="1">新闻</option>
-                        </select>
+        <section class="main">
+            <div class="hot-position">
+                <div class="title">
+                    <h4>热门职位<a href="#">
+                            <small>共计1932个, 查看全部</small>
+                        </a></h4>
+                </div>
 
-                        <input type="text" placeholder="输入搜索内容"/>
-                        <button type="submit" class="mdl-button mdl-js-button mdl-button--raised
-                    mdl-js-ripple-effect button-blue-sky">立即搜索
-                        </button>
-                    </form>
-                    <div class="search-box-appendix">
-                        <span>输入职位名称或描述／新闻标题或内容</span>
-                        <a href="#">使用高级搜索</a>
+                <div class="position-card mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">职位名称1</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Aenan convallis.
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                            查看详情
+                        </a>
+                    </div>
+                </div>
+
+                <div class="position-card mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">职位名称2</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Aenan convallis.
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                            查看详情
+                        </a>
+                    </div>
+                </div>
+
+                <div class="position-card mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">职位名称3</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Aenan convallis.
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                            查看详情
+                        </a>
+                    </div>
+                </div>
+
+                <div class="button-holder">
+                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--fab more-position mdl-shadow--4dp">
+                        <i class="material-icons">keyboard_arrow_right</i>
+                    </button>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+
+
+            <div class="recent-mews">
+                <div class="title">
+                    <h4>最新资讯<a href="#">
+                            <small>查看全部</small>
+                        </a></h4>
+                </div>
+
+                <div class="news-panel">
+                    <div class="news-body">
+                        <div class="content">
+                            <h6>新闻标题1</h6>
+                            <small class="content-appendix"><span>发布时间: 2017-7-17 15:48:55</span><span>作者: author_ly</span>
+                            </small>
+                            <div class="content-body mdl-color-text--black">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris sagittis pellentesque lacus
+                                eleifend
+                                lacinia...Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris sagittis
+                                pellentesque lacus
+                                eleifend lacinia...
+                            </div>
+                        </div>
+
+                        <div class="aside">
+                            <img src="{{asset('images/dog.png')}}" width="155" height="133"/>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </div>
+                </div>
+
+                <div class="news-panel">
+                    <div class="news-body">
+                        <div class="content">
+                            <h6>新闻标题1</h6>
+                            <small class="content-appendix"><span>发布时间: 2017-7-17 15:48:55</span><span>作者: author_ly</span>
+                            </small>
+                            <div class="content-body mdl-color-text--black">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris sagittis pellentesque lacus
+                                eleifend
+                                lacinia...Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris sagittis
+                                pellentesque lacus
+                                eleifend lacinia...
+                            </div>
+                        </div>
+
+                        <div class="aside">
+                            <img src="{{asset('images/dog.png')}}" width="155" height="133"/>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </div>
+                </div>
+
+                <div class="news-panel">
+                    <div class="news-body">
+                        <div class="content">
+                            <h6>新闻标题1</h6>
+                            <small class="content-appendix"><span>发布时间: 2017-7-17 15:48:55</span><span>作者: author_ly</span>
+                            </small>
+                            <div class="content-body mdl-color-text--black">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris sagittis pellentesque lacus
+                                eleifend
+                                lacinia...Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris sagittis
+                                pellentesque lacus
+                                eleifend lacinia...
+                            </div>
+                        </div>
+
+                        <div class="aside">
+                            <img src="{{asset('images/dog.png')}}" width="155" height="133"/>
+                        </div>
+                        <div style="clear: both;"></div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="post-right">
-            <div class="post-image"></div>
-        </section>
-        <div style="clear: both;"></div>
     </div>
-</div>
-
-<div class="container">
-
-    <section class="main">
-        <div class="hot-position">
-            <div class="title">
-                <h4>热门职位<a href="#">
-                        <small>共计1932个, 查看全部</small>
-                    </a></h4>
-            </div>
-
-            <div class="position-card mdl-card mdl-shadow--2dp">
-                <div class="mdl-card__title mdl-card--expand">
-                    <h2 class="mdl-card__title-text">职位名称1</h2>
-                </div>
-                <div class="mdl-card__supporting-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenan convallis.
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                        查看详情
-                    </a>
-                </div>
-            </div>
-
-            <div class="position-card mdl-card mdl-shadow--2dp">
-                <div class="mdl-card__title mdl-card--expand">
-                    <h2 class="mdl-card__title-text">职位名称2</h2>
-                </div>
-                <div class="mdl-card__supporting-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenan convallis.
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                        查看详情
-                    </a>
-                </div>
-            </div>
-
-            <div class="position-card mdl-card mdl-shadow--2dp">
-                <div class="mdl-card__title mdl-card--expand">
-                    <h2 class="mdl-card__title-text">职位名称3</h2>
-                </div>
-                <div class="mdl-card__supporting-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenan convallis.
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                        查看详情
-                    </a>
-                </div>
-            </div>
-
-            <div class="button-holder">
-                <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--fab more-position mdl-shadow--4dp">
-                    <i class="material-icons">keyboard_arrow_right</i>
-                </button>
-            </div>
-            <div style="clear:both;"></div>
-        </div>
-
-
-        <div class="recent-mews">
-            <div class="title">
-                <h4>最新资讯<a href="#">
-                        <small>查看全部</small>
-                    </a></h4>
-            </div>
-
-            <div class="news-panel">
-                <div class="news-body">
-                    <div class="content">
-                        <h6>新闻标题1</h6>
-                        <small class="content-appendix"><span>发布时间: 2017-7-17 15:48:55</span><span>作者: author_ly</span>
-                        </small>
-                        <div class="content-body mdl-color-text--black">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris sagittis pellentesque lacus
-                            eleifend
-                            lacinia...Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris sagittis
-                            pellentesque lacus
-                            eleifend lacinia...
-                        </div>
-                    </div>
-
-                    <div class="aside">
-                        <img src="{{asset('images/dog.png')}}" width="155" height="133"/>
-                    </div>
-                    <div style="clear: both;"></div>
-                </div>
-            </div>
-
-            <div class="news-panel">
-                <div class="news-body">
-                    <div class="content">
-                        <h6>新闻标题1</h6>
-                        <small class="content-appendix"><span>发布时间: 2017-7-17 15:48:55</span><span>作者: author_ly</span>
-                        </small>
-                        <div class="content-body mdl-color-text--black">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris sagittis pellentesque lacus
-                            eleifend
-                            lacinia...Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris sagittis
-                            pellentesque lacus
-                            eleifend lacinia...
-                        </div>
-                    </div>
-
-                    <div class="aside">
-                        <img src="{{asset('images/dog.png')}}" width="155" height="133"/>
-                    </div>
-                    <div style="clear: both;"></div>
-                </div>
-            </div>
-
-            <div class="news-panel">
-                <div class="news-body">
-                    <div class="content">
-                        <h6>新闻标题1</h6>
-                        <small class="content-appendix"><span>发布时间: 2017-7-17 15:48:55</span><span>作者: author_ly</span>
-                        </small>
-                        <div class="content-body mdl-color-text--black">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris sagittis pellentesque lacus
-                            eleifend
-                            lacinia...Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris sagittis
-                            pellentesque lacus
-                            eleifend lacinia...
-                        </div>
-                    </div>
-
-                    <div class="aside">
-                        <img src="{{asset('images/dog.png')}}" width="155" height="133"/>
-                    </div>
-                    <div style="clear: both;"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
-
-<footer>
-    <div class="container">
-        <div class="left">
-            <p><?=$site_name ?></p>
-            <span><small><?=$site_desc ?></small></span>
-        </div>
-
-        <div class="right">
-            <span class="copy-right">site design & develop &copy;2017 Four2Nine Studio<br>
-                esporthr 版权所有 | All rights receives</span>
-        </div>
-        <div style="clear: both;"></div>
-    </div>
-</footer>
-</body>
-</html>
+    @endsection

@@ -15,6 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/index', function () {
+Route::get('index', function () {
     return view('index');
+});
+
+Route::get('account/register', function () {
+    return view('account.register');
+});
+
+Route::get('account/login', function () {
+    return view('account.login');
 });
