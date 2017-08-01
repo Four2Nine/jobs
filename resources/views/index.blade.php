@@ -3,90 +3,31 @@
 @section('custom-style')
     <style>
 
-        .left, .right {
-            display: inline-block;
-        }
-
-        .left {
-            width: 472px;
-            float: left;
-            /*background-color: #66bb6a;*/
-        }
-
-        .right {
-            width: 512px;
-            float: right;
-            /*background-color: #90caf9;*/
-        }
-
         .header-post {
             width: 100%;
-            height: 340px;
-            background-color: #2c2c2c;
+            height: 120px;
+            background-color: var(--primary-color);
         }
 
-        .post-left {
-            width: 512px;
-            float: left;
-            background-color: rgb(35, 35, 35);
-        }
-
-        .post-right {
-            width: 512px;
-            height: 340px;
-            float: right;
-        }
-
-        .post-info {
-            width: 100%;
-            height: 300px;
-            padding: 20px;
-            display: inline-block;
-            color: white;
-        }
-
-        .post-info > h3 {
-            font-weight: 300;
-        }
-
-        .post-info > p {
-            padding-bottom: 16px;
-        }
-
-        .post-image {
-            width: 100%;
-            height: 100%;
-            background: url({{asset('images/DCsoh3.jpg')}}) no-repeat center;
-            -webkit-background-size: contain;
-            -moz-background-size: contain;
-            -o-background-size: contain;
-            background-size: contain;
-            display: inline-block;
-        }
-
-        .search-box select {
-            height: 35px;
-            text-align: center;
-            padding: 0 15px;
-            background-color: white;
-            border: none;
-            border-radius: 0;
-            -webkit-appearance: none;
-            -webkit-border-radius: 0;
-            position: relative;
-            left: 4px;
+        .search-box {
+            padding-top: 25px;
         }
 
         .search-box input {
-            width: 280px;
+            width: 500px;
+            height: 25px;
             padding: 10px 10px;
             border: none;
-            border-left: 1px solid lightgray;
+            font-size: 16px;
             margin-right: 8px;
         }
 
         .search-box button {
             font-weight: 300;
+        }
+
+        .search-box-appendix {
+            padding-top: 4px;
         }
 
         .search-box-appendix span,
@@ -98,9 +39,18 @@
             text-decoration: none;
         }
 
-        .search-box-appendix a {
+        .search-box-appendix a:hover {
+            color: var(--accent-color);
+        }
+
+        .search-box-appendix a:last-child {
             margin-left: 20px;
             text-decoration-line: underline;
+        }
+
+        .search-box button {
+            width: 100px;
+            height: 45px;
         }
 
         .main {
@@ -202,193 +152,225 @@
             color: #4c4c4c;
         }
 
-        .button-blue-sky,
-        .button-blue-sky:hover,
-        .button-blue-sky.mdl-button--raised,
-        .button-blue-sky.mdl-button--fab {
+        .button-accent,
+        .button-accent:hover,
+        .button-accent.mdl-button--raised,
+        .button-accent.mdl-button--fab {
             color: rgb(255, 255, 255);
-            background-color: #1976d2;
+            background-color: var(--accent-color);
         }
 
-        .button-blue-sky .mdl-ripple {
+        .button-accent .mdl-ripple {
             background: rgb(255, 255, 255);
         }
+
+        .recommended-company ul {
+            float: left;
+        }
+
+        .recommended-company ul li {
+            list-style: none;
+        }
+
+        .recommended-company .ad_item {
+            width: 300px;
+            height: 200px;
+            display: block;
+            background: #000;
+        }
+
     </style>
-    @endsection
+@endsection
 
 @section('content')
     <div class="header-post">
         <div class="container">
-            <section class="post-left">
-                <div class="post-info">
-                    <h3>职业电竞的成功之路</h3>
-                    <p class="mdl-color-text--white">游戏人生，放飞自我，最强王者，我们等你来！<br>consectetur adipiscing elit.Mauris sagittis
-                        pellentesque lacus eleifend lacinia...Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris
-                        sagittis</p>
 
-                    <div class="search-box">
-                        <form action="#">
-                            <select title="type" name="type">
-                                <option value="0">职位</option>
-                                <option value="1">新闻</option>
-                            </select>
+            <div class="search-box">
+                <form action="#">
 
-                            <input type="text" placeholder="输入搜索内容"/>
-                            <button type="submit" class="mdl-button mdl-js-button mdl-button--raised
-                        mdl-js-ripple-effect button-blue-sky">立即搜索
-                            </button>
-                        </form>
-                        <div class="search-box-appendix">
-                            <span>输入职位名称或描述／新闻标题或内容</span>
-                            <a href="#">使用高级搜索</a>
-                        </div>
-                    </div>
+                    <input type="text" placeholder="输入搜索内容"/>
+                    <button type="submit" class="mdl-button mdl-js-button mdl-button--raised
+                        mdl-js-ripple-effect button-accent">立即搜索
+                    </button>
+                </form>
+                <div class="search-box-appendix">
+                    <span>热门分类: </span>
+                    <a href="#">电竞培训</a>
+                    <a href="#">电竞传媒</a>
+                    <a href="#">电竞俱乐部</a>
+                    <a href="#">使用高级搜索</a>
                 </div>
-            </section>
-            <section class="post-right">
-                <div class="post-image"></div>
-            </section>
-            <div style="clear: both;"></div>
+            </div>
+
         </div>
     </div>
 
     <div class="container">
 
         <section class="main">
-            <div class="hot-position">
+            <div class="recommended-company">
+
+            </div>
+
+            <div class="recommended-company">
                 <div class="title">
-                    <h4>热门职位<a href="#">
+                    <h4>推荐公司
+                        <a href="#">
                             <small>共计1932个, 查看全部</small>
-                        </a></h4>
-                </div>
-
-                <div class="position-card mdl-card mdl-shadow--2dp">
-                    <div class="mdl-card__title mdl-card--expand">
-                        <h2 class="mdl-card__title-text">职位名称1</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aenan convallis.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                            查看详情
                         </a>
-                    </div>
+                    </h4>
                 </div>
+                <ul>
+                    <li>
+                        <div class="ad_item">
+                            <a href="#">
+                                <img src="#">
+                            </a>
 
-                <div class="position-card mdl-card mdl-shadow--2dp">
-                    <div class="mdl-card__title mdl-card--expand">
-                        <h2 class="mdl-card__title-text">职位名称2</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aenan convallis.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                            查看详情
-                        </a>
-                    </div>
-                </div>
-
-                <div class="position-card mdl-card mdl-shadow--2dp">
-                    <div class="mdl-card__title mdl-card--expand">
-                        <h2 class="mdl-card__title-text">职位名称3</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aenan convallis.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                            查看详情
-                        </a>
-                    </div>
-                </div>
-
-                <div class="button-holder">
-                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--fab more-position mdl-shadow--4dp">
-                        <i class="material-icons">keyboard_arrow_right</i>
-                    </button>
-                </div>
-                <div style="clear:both;"></div>
+                            <div class="ad_item_info">
+                                <h5>title</h5>
+                                <p>content</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
 
 
-            <div class="recent-mews">
-                <div class="title">
-                    <h4>最新资讯<a href="#">
-                            <small>查看全部</small>
-                        </a></h4>
-                </div>
+            {{--<div class="position-card mdl-card mdl-shadow--2dp">--}}
+            {{--<div class="mdl-card__title mdl-card--expand">--}}
+            {{--<h2 class="mdl-card__title-text">职位名称1</h2>--}}
+            {{--</div>--}}
+            {{--<div class="mdl-card__supporting-text">--}}
+            {{--Lorem ipsum dolor sit amet, consectetur adipiscing elit.--}}
+            {{--Aenan convallis.--}}
+            {{--</div>--}}
+            {{--<div class="mdl-card__actions mdl-card--border">--}}
+            {{--<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">--}}
+            {{--查看详情--}}
+            {{--</a>--}}
+            {{--</div>--}}
+            {{--</div>--}}
 
-                <div class="news-panel">
-                    <div class="news-body">
-                        <div class="content">
-                            <h6>新闻标题1</h6>
-                            <small class="content-appendix"><span>发布时间: 2017-7-17 15:48:55</span><span>作者: author_ly</span>
-                            </small>
-                            <div class="content-body mdl-color-text--black">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris sagittis pellentesque lacus
-                                eleifend
-                                lacinia...Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris sagittis
-                                pellentesque lacus
-                                eleifend lacinia...
-                            </div>
-                        </div>
+            {{--<div class="position-card mdl-card mdl-shadow--2dp">--}}
+            {{--<div class="mdl-card__title mdl-card--expand">--}}
+            {{--<h2 class="mdl-card__title-text">职位名称2</h2>--}}
+            {{--</div>--}}
+            {{--<div class="mdl-card__supporting-text">--}}
+            {{--Lorem ipsum dolor sit amet, consectetur adipiscing elit.--}}
+            {{--Aenan convallis.--}}
+            {{--</div>--}}
+            {{--<div class="mdl-card__actions mdl-card--border">--}}
+            {{--<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">--}}
+            {{--查看详情--}}
+            {{--</a>--}}
+            {{--</div>--}}
+            {{--</div>--}}
 
-                        <div class="aside">
-                            <img src="{{asset('images/dog.png')}}" width="155" height="133"/>
-                        </div>
-                        <div style="clear: both;"></div>
-                    </div>
-                </div>
+            {{--<div class="position-card mdl-card mdl-shadow--2dp">--}}
+            {{--<div class="mdl-card__title mdl-card--expand">--}}
+            {{--<h2 class="mdl-card__title-text">职位名称3</h2>--}}
+            {{--</div>--}}
+            {{--<div class="mdl-card__supporting-text">--}}
+            {{--Lorem ipsum dolor sit amet, consectetur adipiscing elit.--}}
+            {{--Aenan convallis.--}}
+            {{--</div>--}}
+            {{--<div class="mdl-card__actions mdl-card--border">--}}
+            {{--<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">--}}
+            {{--查看详情--}}
+            {{--</a>--}}
+            {{--</div>--}}
+            {{--</div>--}}
 
-                <div class="news-panel">
-                    <div class="news-body">
-                        <div class="content">
-                            <h6>新闻标题1</h6>
-                            <small class="content-appendix"><span>发布时间: 2017-7-17 15:48:55</span><span>作者: author_ly</span>
-                            </small>
-                            <div class="content-body mdl-color-text--black">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris sagittis pellentesque lacus
-                                eleifend
-                                lacinia...Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris sagittis
-                                pellentesque lacus
-                                eleifend lacinia...
-                            </div>
-                        </div>
+            {{--<div class="button-holder">--}}
+            {{--<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--fab more-position mdl-shadow--4dp">--}}
+            {{--<i class="material-icons">keyboard_arrow_right</i>--}}
+            {{--</button>--}}
+            {{--</div>--}}
+            {{--<div style="clear:both;"></div>--}}
+            {{--</div>--}}
 
-                        <div class="aside">
-                            <img src="{{asset('images/dog.png')}}" width="155" height="133"/>
-                        </div>
-                        <div style="clear: both;"></div>
-                    </div>
-                </div>
 
-                <div class="news-panel">
-                    <div class="news-body">
-                        <div class="content">
-                            <h6>新闻标题1</h6>
-                            <small class="content-appendix"><span>发布时间: 2017-7-17 15:48:55</span><span>作者: author_ly</span>
-                            </small>
-                            <div class="content-body mdl-color-text--black">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris sagittis pellentesque lacus
-                                eleifend
-                                lacinia...Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris sagittis
-                                pellentesque lacus
-                                eleifend lacinia...
-                            </div>
-                        </div>
+            {{--<div class="recent-mews">--}}
+                {{--<div class="title">--}}
+                    {{--<h4>最新资讯<a href="#">--}}
+                            {{--<small>查看全部</small>--}}
+                        {{--</a></h4>--}}
+                {{--</div>--}}
 
-                        <div class="aside">
-                            <img src="{{asset('images/dog.png')}}" width="155" height="133"/>
-                        </div>
-                        <div style="clear: both;"></div>
-                    </div>
-                </div>
-            </div>
+                {{--<div class="news-panel">--}}
+                    {{--<div class="news-body">--}}
+                        {{--<div class="content">--}}
+                            {{--<h6>新闻标题1</h6>--}}
+                            {{--<small class="content-appendix">--}}
+                                {{--<span>发布时间: 2017-7-17 15:48:55</span><span>作者: author_ly</span>--}}
+                            {{--</small>--}}
+                            {{--<div class="content-body mdl-color-text--black">--}}
+                                {{--Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris sagittis pellentesque--}}
+                                {{--lacus--}}
+                                {{--eleifend--}}
+                                {{--lacinia...Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris sagittis--}}
+                                {{--pellentesque lacus--}}
+                                {{--eleifend lacinia...--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+
+                        {{--<div class="aside">--}}
+                            {{--<img src="{{asset('images/dog.png')}}" width="155" height="133"/>--}}
+                        {{--</div>--}}
+                        {{--<div style="clear: both;"></div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+
+                {{--<div class="news-panel">--}}
+                    {{--<div class="news-body">--}}
+                        {{--<div class="content">--}}
+                            {{--<h6>新闻标题1</h6>--}}
+                            {{--<small class="content-appendix">--}}
+                                {{--<span>发布时间: 2017-7-17 15:48:55</span><span>作者: author_ly</span>--}}
+                            {{--</small>--}}
+                            {{--<div class="content-body mdl-color-text--black">--}}
+                                {{--Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris sagittis pellentesque--}}
+                                {{--lacus--}}
+                                {{--eleifend--}}
+                                {{--lacinia...Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris sagittis--}}
+                                {{--pellentesque lacus--}}
+                                {{--eleifend lacinia...--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+
+                        {{--<div class="aside">--}}
+                            {{--<img src="{{asset('images/dog.png')}}" width="155" height="133"/>--}}
+                        {{--</div>--}}
+                        {{--<div style="clear: both;"></div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+
+                {{--<div class="news-panel">--}}
+                    {{--<div class="news-body">--}}
+                        {{--<div class="content">--}}
+                            {{--<h6>新闻标题1</h6>--}}
+                            {{--<small class="content-appendix">--}}
+                                {{--<span>发布时间: 2017-7-17 15:48:55</span><span>作者: author_ly</span>--}}
+                            {{--</small>--}}
+                            {{--<div class="content-body mdl-color-text--black">--}}
+                                {{--Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris sagittis pellentesque--}}
+                                {{--lacus--}}
+                                {{--eleifend--}}
+                                {{--lacinia...Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris sagittis--}}
+                                {{--pellentesque lacus--}}
+                                {{--eleifend lacinia...--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+
+                        {{--<div class="aside">--}}
+                            {{--<img src="{{asset('images/dog.png')}}" width="155" height="133"/>--}}
+                        {{--</div>--}}
+                        {{--<div style="clear: both;"></div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
         </section>
     </div>
-    @endsection
+@endsection

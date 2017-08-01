@@ -26,3 +26,7 @@ Route::get('account/register', function () {
 Route::get('account/login', function () {
     return view('account.login');
 });
+
+Route::get('account/findPassword', function () {
+    return view('account.findPassword');
+});

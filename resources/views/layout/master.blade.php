@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>@yield('title')</title>
     <link rel="stylesheet" type="text/css" href="{{asset('style/material.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('style/style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('style/icon-fonts.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('style/style.css')}}">
     <script src="{{asset('js/material.js')}}"></script>
     @section('custom-style')
     @show

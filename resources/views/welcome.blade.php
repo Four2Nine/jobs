@@ -35,6 +35,7 @@
 
         .title {
             font-size: 50px;
+            padding-top: 20px;
         }
 
         .web-contents {
@@ -61,9 +62,9 @@
 
     <div class="web-contents">
         <p><a href="/index">/index&nbsp;&nbsp;首页</a> <i class="material-icons">check</i></p>
-        <p><a href="/account/register">/account/register&nbsp;&nbsp;注册页面</a></p>
-        <p><a href="/account/login">/account/login&nbsp;&nbsp;登录页面</a></p>
-        <p><a href="/account/findPassword">/account/findPassword&nbsp;&nbsp;找回密码</a></p>
+        <p><a href="/account/register">/account/register&nbsp;&nbsp;注册页面</a> <i class="material-icons">check</i></p>
+        <p><a href="/account/login">/account/login&nbsp;&nbsp;登录页面</a> <i class="material-icons">check</i></p>
+        <p><a href="/account/findPassword">/account/findPassword&nbsp;&nbsp;找回密码</a> <i class="material-icons">check</i></p>
     </div>
 </div>
 </body>
