@@ -53,13 +53,6 @@ body {
     /*background-color: lightblue;*/
 }
 
-/*.spacer {*/
-/*display: inline-block;*/
-/*width: 700px;*/
-/*height: 2px;*/
-/*!*background: lightgray;*!*/
-/*}*/
-
 .nav {
     display: inline-block;
     float: right;
@@ -139,6 +132,22 @@ footer > .container > .right {
 .button-blue-sky.mdl-button--fab {
     color: rgb(255, 255, 255);
     background-color: var(--blue-sky);
+}
+
+.button-link,
+.button-link:hover,
+.button-link.mdl-button--raised,
+.button-link.mdl-button--fab {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+
+.button-blue-sky .mdl-ripple {
+    background: rgb(255, 255, 255);
+}
+
+.button-link .mdl-ripple {
+    background: var(--blue-sky);
 }
 
 .button-border {

@@ -21,7 +21,7 @@
             width: 800px;
             height: 380px;
             margin: 0 auto;
-            background-color: rgba(255, 255, 255, .9);
+            background-color: rgba(255, 255, 255, .95);
             padding: 0 30px;
             border: 1px solid lightgray;
         }
@@ -70,7 +70,7 @@
                 <span class="mdl-textfield__error">请输入格式正确的验证码!</span>
             </div>
 
-            <button class="mdl-button mdl-js-button mdl-button--raised button-blue-sky">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-blue-sky">
                 下一步
             </button>
         </div>
@@ -93,7 +93,7 @@
                 <span class="mdl-textfield__error"></span>
             </div>
 
-            <button class="mdl-button mdl-js-button mdl-button--raised button-blue-sky">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-blue-sky">
                 确认重置
             </button>
         </div>
