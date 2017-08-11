@@ -85,35 +85,33 @@
             background: rgb(255, 255, 255);
         }
 
-        .recommended-company ul {
+        ul {
             float: left;
             padding: 0;
         }
 
-        .recommended-company ul li {
+        ul li {
             list-style: none;
             display: inline-block;
-            margin-right: 12px;
-            margin-bottom: 16px;
+            margin-right: 5px;
+            margin-bottom: 10px;
         }
 
         .light-bg {
             width: 100%;
-            background-color: lightgray;
+            background-color: #f5f5f5;
             margin-top: 60px;
             padding: 45px 0;
         }
 
         .image_ad {
-            width: 330px;
+            width: 335px;
             display: block;
             position: relative;
         }
 
         .word_ad {
             width: 328px;
-            border: 1px solid rgba(0, 0, 0, .4);
-            border-radius: 3px;
         }
 
         .image_ad > .ad_info {
@@ -121,19 +119,49 @@
             bottom: 0;
             z-index: 99;
             width: 330px;
-            height: 80px;
-            background-color: rgba(255, 255, 255, .15);
+            background-color: rgba(255, 255, 255, .2);
+            display: none;
+        }
+
+        .image_ad:hover .ad_info {
+            display: block;
         }
 
         .image_ad > .ad_info > h5,
+        .image_ad > .ad_info > h6,
         .image_ad > .ad_info > p {
             color: #fff;
         }
 
-        .ad_info > h5 {
+        .ad_info > h5,
+        .ad_info > h6 {
             margin: 0;
             font-weight: 500;
             padding: 8px;
+        }
+
+        .word_ad > .ad_info h6 a,
+        .word_ad > .ad_info p a {
+            font-weight: 300;
+            color: #000;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .word_ad > .ad_info h6 {
+            padding-bottom: 0;
+        }
+
+        .word_ad > .ad_info p a {
+            color: #373737;
+            margin-left: 8px;
+            font-size: 12px;
+        }
+
+        .word_ad > .ad_info h6 a:hover,
+        .word_ad > .ad_info p a:hover,
+        .news-panel ul li a:hover {
+            color: var(--accent-color);
         }
 
         .ad_info > p {
@@ -167,26 +195,29 @@
 
         .hot-position,
         .recent-news {
-            padding: 45px 0;
+            padding-top: 45px;
         }
 
         .news-panel ul {
-            padding-left:0;
+            padding-left: 0;
         }
 
-        .news-panel ul li{
+        .news-panel ul li {
+            display: block;
             list-style: none;
-            margin:8px 0;
+            margin: 8px 0;
         }
-        .news-panel ul li a{
+
+        .news-panel ul li a {
             font-weight: 300;
             text-decoration: none;
             color: #000;
         }
+
         .news-panel ul li a small {
             margin-left: 16px;
             font-weight: 300;
-            color: rgba(0,0,0,.4);
+            color: rgba(0, 0, 0, .4);
         }
 
     </style>
@@ -238,7 +269,7 @@
                     <li>
                         <div class="image_ad">
                             <a href="#">
-                                <img src={{asset('images/DCsoh3.jpg')}} width="330" height="200">
+                                <img src={{asset('images/welcome_card.jpg')}} width="330" height="150">
                             </a>
 
                             <div class="ad_info">
@@ -251,7 +282,7 @@
                     <li>
                         <div class="image_ad">
                             <a href="#">
-                                <img src={{asset('images/DCsoh3.jpg')}} width="330" height="200">
+                                <img src={{asset('images/welcome_card.jpg')}} width="330" height="150">
                             </a>
 
                             <div class="ad_info">
@@ -264,7 +295,7 @@
                     <li class="none_margin">
                         <div class="image_ad">
                             <a href="#">
-                                <img src={{asset('images/DCsoh3.jpg')}} width="330" height="200">
+                                <img src={{asset('images/welcome_card.jpg')}} width="330" height="150">
                             </a>
 
                             <div class="ad_info">
@@ -277,7 +308,7 @@
                     <li>
                         <div class="image_ad">
                             <a href="#">
-                                <img src={{asset('images/DCsoh3.jpg')}} width="330" height="200">
+                                <img src={{asset('images/welcome_card.jpg')}} width="330" height="150">
                             </a>
 
                             <div class="ad_info">
@@ -290,7 +321,7 @@
                     <li>
                         <div class="image_ad">
                             <a href="#">
-                                <img src={{asset('images/DCsoh3.jpg')}} width="330" height="200">
+                                <img src={{asset('images/welcome_card.jpg')}} width="330" height="150">
                             </a>
 
                             <div class="ad_info">
@@ -303,7 +334,7 @@
                     <li class="none_margin">
                         <div class="image_ad">
                             <a href="#">
-                                <img src={{asset('images/DCsoh3.jpg')}} width="330" height="200">
+                                <img src={{asset('images/welcome_card.jpg')}} width="330" height="150">
                             </a>
 
                             <div class="ad_info">
@@ -313,15 +344,16 @@
                         </div>
                     </li>
 
+                    {{--small size image ad--}}
+                    <div style="margin-top: 40px;"></div>
+
                     <li>
                         <div class="image_ad">
                             <a href="#">
-                                <img src={{asset('images/DCsoh3.jpg')}} width="330" height="200">
+                                <img src={{asset('images/house.jpg')}} width="330" height="100">
                             </a>
-
                             <div class="ad_info">
-                                <h5>公司名称</h5>
-                                <p>公司简介</p>
+                                <h6>公司名称</h6>
                             </div>
                         </div>
                     </li>
@@ -329,12 +361,10 @@
                     <li>
                         <div class="image_ad">
                             <a href="#">
-                                <img src={{asset('images/DCsoh3.jpg')}} width="330" height="200">
+                                <img src={{asset('images/house.jpg')}} width="330" height="100">
                             </a>
-
                             <div class="ad_info">
-                                <h5>公司名称</h5>
-                                <p>公司简介</p>
+                                <h6>公司名称</h6>
                             </div>
                         </div>
                     </li>
@@ -342,12 +372,10 @@
                     <li class="none_margin">
                         <div class="image_ad">
                             <a href="#">
-                                <img src={{asset('images/DCsoh3.jpg')}} width="330" height="200">
+                                <img src={{asset('images/house.jpg')}} width="330" height="100">
                             </a>
-
                             <div class="ad_info">
-                                <h5>公司名称</h5>
-                                <p>公司简介</p>
+                                <h6>公司名称</h6>
                             </div>
                         </div>
                     </li>
@@ -355,12 +383,10 @@
                     <li>
                         <div class="image_ad">
                             <a href="#">
-                                <img src={{asset('images/DCsoh3.jpg')}} width="330" height="200">
+                                <img src={{asset('images/house.jpg')}} width="330" height="100">
                             </a>
-
                             <div class="ad_info">
-                                <h5>公司名称</h5>
-                                <p>公司简介</p>
+                                <h6>公司名称</h6>
                             </div>
                         </div>
                     </li>
@@ -368,12 +394,10 @@
                     <li>
                         <div class="image_ad">
                             <a href="#">
-                                <img src={{asset('images/DCsoh3.jpg')}} width="330" height="200">
+                                <img src={{asset('images/house.jpg')}} width="330" height="100">
                             </a>
-
                             <div class="ad_info">
-                                <h5>公司名称</h5>
-                                <p>公司简介</p>
+                                <h6>公司名称</h6>
                             </div>
                         </div>
                     </li>
@@ -381,12 +405,43 @@
                     <li class="none_margin">
                         <div class="image_ad">
                             <a href="#">
-                                <img src={{asset('images/DCsoh3.jpg')}} width="330" height="200">
+                                <img src={{asset('images/house.jpg')}} width="330" height="100">
                             </a>
-
                             <div class="ad_info">
-                                <h5>公司名称</h5>
-                                <p>公司简介</p>
+                                <h6>公司名称</h6>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="image_ad">
+                            <a href="#">
+                                <img src={{asset('images/house.jpg')}} width="330" height="100">
+                            </a>
+                            <div class="ad_info">
+                                <h6>公司名称</h6>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="image_ad">
+                            <a href="#">
+                                <img src={{asset('images/house.jpg')}} width="330" height="100">
+                            </a>
+                            <div class="ad_info">
+                                <h6>公司名称</h6>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="none_margin">
+                        <div class="image_ad">
+                            <a href="#">
+                                <img src={{asset('images/house.jpg')}} width="330" height="100">
+                            </a>
+                            <div class="ad_info">
+                                <h6>公司名称</h6>
                             </div>
                         </div>
                     </li>
@@ -399,13 +454,11 @@
             <div class="light-bg">
                 <div class="container">
 
-
                     <ul>
                         <li>
                             <div class="word_ad">
                                 <div class="ad_info">
-                                    <h5><a href="#">公司名称</a></h5>
-                                    <p>公司简介</p>
+                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
                                 </div>
                             </div>
                         </li>
@@ -413,8 +466,7 @@
                         <li>
                             <div class="word_ad">
                                 <div class="ad_info">
-                                    <h5><a href="#">公司名称</a></h5>
-                                    <p>公司简介</p>
+                                    <h6><a href="#">小牛普惠昆明分公司 (昆明市)</a></h6>
                                 </div>
                             </div>
                         </li>
@@ -422,8 +474,7 @@
                         <li class="none_margin">
                             <div class="word_ad">
                                 <div class="ad_info">
-                                    <h5><a href="#">公司名称</a></h5>
-                                    <p>公司简介</p>
+                                    <h6><a href="#">广州壬泰实业投资有限公司 (广东省)</a></h6>
                                 </div>
                             </div>
                         </li>
@@ -431,8 +482,7 @@
                         <li>
                             <div class="word_ad">
                                 <div class="ad_info">
-                                    <h5><a href="#">公司名称</a></h5>
-                                    <p>公司简介</p>
+                                    <h6><a href="#">盛世创富证券投资顾问有限公司广州公司 (广州市)</a></h6>
                                 </div>
                             </div>
                         </li>
@@ -440,8 +490,7 @@
                         <li>
                             <div class="word_ad">
                                 <div class="ad_info">
-                                    <h5><a href="#">公司名称</a></h5>
-                                    <p>公司简介</p>
+                                    <h6><a href="#">尚智逢源基金销售有限公司上海分公司 (上海)</a></h6>
                                 </div>
                             </div>
                         </li>
@@ -449,8 +498,7 @@
                         <li class="none_margin">
                             <div class="word_ad">
                                 <div class="ad_info">
-                                    <h5><a href="#">公司名称</a></h5>
-                                    <p>公司简介</p>
+                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
                                 </div>
                             </div>
                         </li>
@@ -458,8 +506,7 @@
                         <li>
                             <div class="word_ad">
                                 <div class="ad_info">
-                                    <h5><a href="#">公司名称</a></h5>
-                                    <p>公司简介</p>
+                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
                                 </div>
                             </div>
                         </li>
@@ -467,8 +514,7 @@
                         <li>
                             <div class="word_ad">
                                 <div class="ad_info">
-                                    <h5><a href="#">公司名称</a></h5>
-                                    <p>公司简介</p>
+                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
                                 </div>
                             </div>
                         </li>
@@ -476,8 +522,7 @@
                         <li class="none_margin">
                             <div class="word_ad">
                                 <div class="ad_info">
-                                    <h5><a href="#">公司名称</a></h5>
-                                    <p>公司简介</p>
+                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
                                 </div>
                             </div>
                         </li>
@@ -485,8 +530,7 @@
                         <li>
                             <div class="word_ad">
                                 <div class="ad_info">
-                                    <h5><a href="#">公司名称</a></h5>
-                                    <p>公司简介</p>
+                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
                                 </div>
                             </div>
                         </li>
@@ -494,8 +538,7 @@
                         <li>
                             <div class="word_ad">
                                 <div class="ad_info">
-                                    <h5><a href="#">公司名称</a></h5>
-                                    <p>公司简介</p>
+                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
                                 </div>
                             </div>
                         </li>
@@ -503,8 +546,79 @@
                         <li class="none_margin">
                             <div class="word_ad">
                                 <div class="ad_info">
-                                    <h5><a href="#">公司名称</a></h5>
-                                    <p>公司简介</p>
+                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="word_ad">
+                                <div class="ad_info">
+                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="word_ad">
+                                <div class="ad_info">
+                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="none_margin">
+                            <div class="word_ad">
+                                <div class="ad_info">
+                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="word_ad">
+                                <div class="ad_info">
+                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="word_ad">
+                                <div class="ad_info">
+                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="none_margin">
+                            <div class="word_ad">
+                                <div class="ad_info">
+                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="word_ad">
+                                <div class="ad_info">
+                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="word_ad">
+                                <div class="ad_info">
+                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="none_margin">
+                            <div class="word_ad">
+                                <div class="ad_info">
+                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
                                 </div>
                             </div>
                         </li>
@@ -519,58 +633,195 @@
             <div class="container">
 
                 <div class="title">
-                    <h4>热门职位
+                    <h4>急聘职位
                         <a href="#">
                             <small>共计1932个, 查看全部</small>
                         </a>
                     </h4>
                 </div>
 
-                <div class="position-card mdl-card mdl-shadow--2dp" style="height: 120px;">
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">职位名称1</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aenan convallis.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aenan convallis.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-js-button mdl-js-ripple-effect button-link">
-                            查看详情
-                        </a>
-                    </div>
-                </div>
 
-                <div class="position-card mdl-card mdl-shadow--2dp">
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">职位名称2</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aenan convallis.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-js-button mdl-js-ripple-effect button-link">
-                            查看详情
-                        </a>
-                    </div>
-                </div>
+                <ul>
+                    <li>
+                        <div class="word_ad">
+                            <div class="ad_info">
+                                <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                <p>
+                                    <small><b>急聘: </b><a href="#"><b>市场专员</b></a></small>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
 
-                <div class="position-card mdl-card mdl-shadow--2dp">
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">职位名称3</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aenan convallis.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-js-button mdl-js-ripple-effect button-link">
-                            查看详情
-                        </a>
-                    </div>
-                </div>
+                    <li>
+                        <div class="word_ad">
+                            <div class="ad_info">
+                                <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                <p>
+                                    <small><b>急聘: </b><a href="#"><b>市场专员</b></a></small>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="none_margin">
+                        <div class="word_ad">
+                            <div class="ad_info">
+                                <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                <p>
+                                    <small><b>急聘: </b><a href="#"><b>市场专员</b></a></small>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="word_ad">
+                            <div class="ad_info">
+                                <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                <p>
+                                    <small><b>急聘: </b><a href="#"><b>市场专员</b></a></small>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="word_ad">
+                            <div class="ad_info">
+                                <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                <p>
+                                    <small><b>急聘: </b><a href="#"><b>市场专员</b></a></small>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="none_margin">
+                        <div class="word_ad">
+                            <div class="ad_info">
+                                <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                <p>
+                                    <small><b>急聘: </b><a href="#"><b>市场专员</b></a></small>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="word_ad">
+                            <div class="ad_info">
+                                <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                <p>
+                                    <small><b>急聘: </b><a href="#"><b>市场专员</b></a></small>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="word_ad">
+                            <div class="ad_info">
+                                <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                <p>
+                                    <small><b>急聘: </b><a href="#"><b>市场专员</b></a></small>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="none_margin">
+                        <div class="word_ad">
+                            <div class="ad_info">
+                                <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                <p>
+                                    <small><b>急聘: </b><a href="#"><b>市场专员</b></a></small>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="word_ad">
+                            <div class="ad_info">
+                                <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                <p>
+                                    <small><b>急聘: </b><a href="#"><b>市场专员</b></a></small>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="word_ad">
+                            <div class="ad_info">
+                                <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                <p>
+                                    <small><b>急聘: </b><a href="#"><b>市场专员</b></a></small>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="none_margin">
+                        <div class="word_ad">
+                            <div class="ad_info">
+                                <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                <p>
+                                    <small><b>急聘: </b><a href="#"><b>市场专员</b></a></small>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+                <div style="clear: both;"></div>
+
+                {{--<div class="position-card mdl-card mdl-shadow--2dp" style="height: 120px;">--}}
+                {{--<div class="mdl-card__title">--}}
+                {{--<h2 class="mdl-card__title-text">职位名称1</h2>--}}
+                {{--</div>--}}
+                {{--<div class="mdl-card__supporting-text">--}}
+                {{--Lorem ipsum dolor sit amet, consectetur adipiscing elit.--}}
+                {{--Aenan convallis.Lorem ipsum dolor sit amet, consectetur adipiscing elit.--}}
+                {{--Aenan convallis.--}}
+                {{--</div>--}}
+                {{--<div class="mdl-card__actions mdl-card--border">--}}
+                {{--<a class="mdl-button mdl-js-button mdl-js-ripple-effect button-link">--}}
+                {{--查看详情--}}
+                {{--</a>--}}
+                {{--</div>--}}
+                {{--</div>--}}
+
+                {{--<div class="position-card mdl-card mdl-shadow--2dp">--}}
+                {{--<div class="mdl-card__title">--}}
+                {{--<h2 class="mdl-card__title-text">职位名称2</h2>--}}
+                {{--</div>--}}
+                {{--<div class="mdl-card__supporting-text">--}}
+                {{--Lorem ipsum dolor sit amet, consectetur adipiscing elit.--}}
+                {{--Aenan convallis.--}}
+                {{--</div>--}}
+                {{--<div class="mdl-card__actions mdl-card--border">--}}
+                {{--<a class="mdl-button mdl-js-button mdl-js-ripple-effect button-link">--}}
+                {{--查看详情--}}
+                {{--</a>--}}
+                {{--</div>--}}
+                {{--</div>--}}
+
+                {{--<div class="position-card mdl-card mdl-shadow--2dp">--}}
+                {{--<div class="mdl-card__title">--}}
+                {{--<h2 class="mdl-card__title-text">职位名称3</h2>--}}
+                {{--</div>--}}
+                {{--<div class="mdl-card__supporting-text">--}}
+                {{--Lorem ipsum dolor sit amet, consectetur adipiscing elit.--}}
+                {{--Aenan convallis.--}}
+                {{--</div>--}}
+                {{--<div class="mdl-card__actions mdl-card--border">--}}
+                {{--<a class="mdl-button mdl-js-button mdl-js-ripple-effect button-link">--}}
+                {{--查看详情--}}
+                {{--</a>--}}
+                {{--</div>--}}
+                {{--</div>--}}
             </div>
         </div>
 
@@ -585,11 +836,21 @@
 
                 <div class="news-panel">
                     <ul>
-                        <li><a href="">资讯标题资讯标题资讯标题资讯标题<small><i>2017-08-03</i></small></a></li>
-                        <li><a href="">资讯标题资讯标题资讯<small><i>2017-08-03</i></small></a></li>
-                        <li><a href="">资讯标题资讯标题<small><i>2017-08-03</i></small></a></li>
-                        <li><a href="">资讯标题资讯标题资讯标题资讯<small><i>2017-08-03</i></small></a></li>
+                        <li><a href="">资讯标题资讯标题资讯标题资讯标题
+                                <small><i>2017-08-03</i></small>
+                            </a></li>
+                        <li><a href="">资讯标题资讯标题资讯
+                                <small><i>2017-08-03</i></small>
+                            </a></li>
+                        <li><a href="">资讯标题资讯标题
+                                <small><i>2017-08-03</i></small>
+                            </a></li>
+                        <li><a href="">资讯标题资讯标题资讯标题资讯
+                                <small><i>2017-08-03</i></small>
+                            </a></li>
                     </ul>
+
+                    <div style="clear: both;"></div>
                 </div>
             </div>
         </div>

@@ -61,6 +61,17 @@
             <div class="left">
                 <p><?=$site_name ?></p>
                 <span><small><?=$site_desc ?></small></span>
+                <br>
+                <br>
+                <small>联系：xxxxxxxxxxxx@xxxx.com</small><br>
+                <small>联系：(86)021-65642222</small><br>
+                <small>地址：上海市杨浦区邯郸路220号</small><br>
+                <small>邮编：200433</small><br>
+
+            </div>
+
+            <div class="middle">
+                <p></p>
             </div>
 
             <div class="right">
