@@ -30,3 +30,7 @@ Route::get('account/login', function () {
 Route::get('account/findPassword', function () {
     return view('account.findPassword');
 });
+
+Route::get('account/index', function () {
+    return view('account.index');
+});

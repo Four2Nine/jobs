@@ -3,8 +3,15 @@ body {
     padding: 0 !important;
     --primary-color: #333333;
     --primary-color-dark: #232323;
-    --accent-color: #da0717;
+    --white:#ffffff;
     --blue-sky: #03A9F4;
+    --blue-sky-dark: #1976D2;
+    --cucumber: #4CAF50;
+    --cucumber-dark: #388E3C;
+    --tomato: #F44336;
+    --tomato-dark: #D32F2F;
+    --orange: #FF9800;
+    --orange-dark: #F57C00;
 }
 
 .left, .right {
@@ -100,7 +107,7 @@ body {
     bottom: 0;
     left: 0;
     position: absolute;
-    background: var(--accent-color);
+    background: var(--tomato);
     -webkit-animation: border-expand 0.2s cubic-bezier(0.4, 0, 0.4, 1) alternate forwards;
     animation: border-expand 0.2s cubic-bezier(0.4, 0, 0.4, 1) alternate forwards;
     transition: all 1s cubic-bezier(0.4, 0, 1, 1);
@@ -140,6 +147,14 @@ footer > .container > .right {
     background-color: var(--blue-sky);
 }
 
+.button-cucumber,
+.button-cucumber:hover,
+.button-cucumber.mdl-button--raised,
+.button-cucumber.mdl-button--fab {
+    color: rgb(255, 255, 255);
+    background-color: var(--cucumber);
+}
+
 .button-link,
 .button-link:hover,
 .button-link.mdl-button--raised,
@@ -162,4 +177,8 @@ footer > .container > .right {
     color: var(--primary-color);
     font-size: 10px;
     text-align: center;
+}
+
+.img-circle {
+    border-radius: 50%;
 }

@@ -40,7 +40,7 @@
         }
 
         .search-box-appendix a:hover {
-            color: var(--accent-color);
+            color: var(--tomato);
         }
 
         .search-box-appendix a:last-child {
@@ -78,7 +78,7 @@
         .button-accent.mdl-button--raised,
         .button-accent.mdl-button--fab {
             color: rgb(255, 255, 255);
-            background-color: var(--accent-color);
+            background-color: var(--tomato-dark);
         }
 
         .button-accent .mdl-ripple {
@@ -123,9 +123,9 @@
             display: none;
         }
 
-        .image_ad:hover .ad_info {
-            display: block;
-        }
+        /*.image_ad:hover .ad_info {*/
+            /*display: block;*/
+        /*}*/
 
         .image_ad > .ad_info > h5,
         .image_ad > .ad_info > h6,
@@ -161,7 +161,7 @@
         .word_ad > .ad_info h6 a:hover,
         .word_ad > .ad_info p a:hover,
         .news-panel ul li a:hover {
-            color: var(--accent-color);
+            color: var(--tomato);
         }
 
         .ad_info > p {
@@ -221,6 +221,18 @@
         }
 
     </style>
+@endsection
+
+@section('custom-script')
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".image_ad").mouseenter(function () {
+                $(this).find(".ad_info").show(300);
+            }).mouseleave(function () {
+                $(this).find(".ad_info").hide(300);
+            });
+        });
+    </script>
 @endsection
 
 @section('content')

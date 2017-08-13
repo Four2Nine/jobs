@@ -6,8 +6,12 @@
     <link rel="stylesheet" type="text/css" href="{{asset('style/material.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('style/icon-fonts.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('style/style.css')}}">
+    <script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
     <script src="{{asset('js/material.js')}}"></script>
     @section('custom-style')
+    @show
+
+    @section('custom-script')
     @show
 </head>
 <body>
@@ -42,7 +46,7 @@
         <div class="header-tab">
             <div class="container">
                 <a href="" class="mdl-layout__tab is-active">首页</a>
-                <a href="" class="mdl-layout__tab">个人首页</a>
+                <a href="" class="mdl-layout__tab">个人中心</a>
                 <a href="" class="mdl-layout__tab">职位搜索</a>
                 <a href="" class="mdl-layout__tab">资讯中心</a>
                 <div style="clear: both;"></div>
@@ -63,10 +67,14 @@
                 <span><small><?=$site_desc ?></small></span>
                 <br>
                 <br>
-                <small>联系：xxxxxxxxxxxx@xxxx.com</small><br>
-                <small>联系：(86)021-65642222</small><br>
-                <small>地址：上海市杨浦区邯郸路220号</small><br>
-                <small>邮编：200433</small><br>
+                <small>联系：xxxxxxxxxxxx@xxxx.com</small>
+                <br>
+                <small>联系：(86)021-65642222</small>
+                <br>
+                <small>地址：上海市杨浦区邯郸路220号</small>
+                <br>
+                <small>邮编：200433</small>
+                <br>
 
             </div>
 

@@ -65,6 +65,7 @@
         <p><a href="/account/register">/account/register&nbsp;&nbsp;注册页面</a> <i class="material-icons">check</i></p>
         <p><a href="/account/login">/account/login&nbsp;&nbsp;登录页面</a> <i class="material-icons">check</i></p>
         <p><a href="/account/findPassword">/account/findPassword&nbsp;&nbsp;找回密码</a> <i class="material-icons">check</i></p>
+        <p><a href="/account/index">/account/index&nbsp;&nbsp;个人中心</a> <i class="material-icons"></i></p>
     </div>
 </div>
 </body>
