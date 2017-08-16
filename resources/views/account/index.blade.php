@@ -3,67 +3,31 @@
 
 @section('custom-style')
     <style>
-        .info-panel {
-            margin: 20px 0;
-        }
-
-        .gap {
-            width: 8px;
-            display: inline-block;
-        }
-
-        .info-panel--right {
-            width: 380px;
-        }
-
-        .info-panel--left {
-            width: 628px;
-        }
-
-        .info-panel.info-panel--left,
-        .info-panel.info-panel--right {
-            display: inline-block;
-            vertical-align: top;
-        }
-
-        .info-card {
-            width: 100%;
-            display: inline-block;
-            margin-bottom: 16px;
-        }
-
-        .info-card .mdl-card__title h5.mdl-card__title-text {
-            font-size: 18px;
-            font-weight: 300;
-        }
-        .info-card .mdl-card__title h6.mdl-card__title-text {
-            font-size: 14px;
-            font-weight: 400;
-        }
 
         .base-info--user {
             border-top: 3px solid var(--cucumber);
         }
 
         .base-info--user .mdl-card__title {
-            padding:8px;
+            padding: 8px;
         }
-        .base-info--user .mdl-card__supporting-text{
-            width:100%;
+
+        .base-info--user .mdl-card__supporting-text {
+            width: 100%;
             display: inline-block;
             padding: 0 8px 8px 8px;
         }
 
-        .base-info--user__header{
-            margin:25px 20px 10px 20px;
+        .base-info--user__header {
+            margin: 25px 20px 10px 20px;
         }
 
-        .base-info--user > .mdl-card__menu>button>i{
+        .base-info--user > .mdl-card__menu > button > i {
             color: var(--cucumber);
         }
 
         .base-info--user__title {
-            width:218px;
+            width: 218px;
             display: inline-block;
             vertical-align: middle;
         }
@@ -77,17 +41,17 @@
             font-size: 18px;
         }
 
-        .base-info--user__contact{
+        .base-info--user__contact {
             margin: 0;
             padding: 0;
             border-top: 1px solid rgba(0, 0, 0, .1);
         }
 
-        .base-info--user__contact li{
+        .base-info--user__contact li {
             padding: 0 16px;
         }
 
-        .base-info--user__functions>.mdl-chip {
+        .base-info--user__functions > .mdl-chip {
             cursor: pointer;
             margin: 2px 4px;
         }
@@ -99,15 +63,6 @@
 
         .base-info--recommendation {
             border-top: 3px solid var(--orange);
-        }
-
-        .base-info--recommendation .mdl-card__actions {
-            text-align: center;
-        }
-
-        .base-info--recommendation .mdl-card__actions .mdl-progress {
-            padding:0;
-            width:100%;
         }
 
         .resume-item {
@@ -143,6 +98,50 @@
             background-color: #f7f7f7;
             padding: 5px;
             margin-right: 20px;
+        }
+
+        .recommendation-panel>ul>li{
+            width:280px;
+        }
+
+        .word_re {
+            margin-left: 16px;
+        }
+
+        .re_info > h6 {
+            margin: 0;
+            font-weight: 500;
+            padding: 8px;
+        }
+
+        .word_re > .re_info h6 a,
+        .word_re > .re_info p a {
+            font-weight: 300;
+            color: #000;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .word_re > .re_info h6 {
+            padding: 8px 0 0 0;
+        }
+
+        .word_re > .re_info p a {
+            color: #373737;
+            margin-left: 8px;
+            font-size: 12px;
+        }
+
+        .word_re > .re_info h6 a:hover,
+        .word_re > .re_info p a:hover,
+        .news-panel ul li a:hover {
+            color: var(--tomato);
+        }
+
+        .ad_info > p {
+            font-weight: 300;
+            margin-bottom: 0;
+            padding: 0 8px 8px 8px;
         }
     </style>
 @endsection
@@ -233,9 +232,96 @@
                     {{--</button>--}}
                     {{--</div>--}}
 
-                    <div class="mdl-card__actions mdl-card--border resume-panel">
-                        <div class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
-                        <div class="mdl-spinner mdl-js-spinner is-active"></div>
+                    <div class="mdl-card__actions mdl-card--border recommendation-panel">
+                        <ul>
+                            <li>
+                                <div class="word_re">
+                                    <div class="re_info">
+                                        <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                        <p>
+                                            <small><b>职位: </b><a href="#"><b>市场专员</b></a></small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="word_re">
+                                    <div class="re_info">
+                                        <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                        <p>
+                                            <small><b>职位: </b><a href="#"><b>市场专员</b></a></small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="word_re">
+                                    <div class="re_info">
+                                        <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                        <p>
+                                            <small><b>职位: </b><a href="#"><b>市场专员</b></a></small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="word_re">
+                                    <div class="re_info">
+                                        <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                        <p>
+                                            <small><b>职位: </b><a href="#"><b>市场专员</b></a></small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="word_re">
+                                    <div class="re_info">
+                                        <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                        <p>
+                                            <small><b>职位: </b><a href="#"><b>市场专员</b></a></small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="word_re">
+                                    <div class="re_info">
+                                        <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                        <p>
+                                            <small><b>职位: </b><a href="#"><b>市场专员</b></a></small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="word_re">
+                                    <div class="re_info">
+                                        <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                        <p>
+                                            <small><b>职位: </b><a href="#"><b>市场专员</b></a></small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="word_re">
+                                    <div class="re_info">
+                                        <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                        <p>
+                                            <small><b>职位: </b><a href="#"><b>市场专员</b></a></small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

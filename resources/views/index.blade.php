@@ -1,4 +1,5 @@
 @extends('layout.master')
+@section('title', 'esporthr首页')
 
 @section('custom-style')
     <style>
@@ -83,18 +84,6 @@
 
         .button-accent .mdl-ripple {
             background: rgb(255, 255, 255);
-        }
-
-        ul {
-            float: left;
-            padding: 0;
-        }
-
-        ul li {
-            list-style: none;
-            display: inline-block;
-            margin-right: 5px;
-            margin-bottom: 10px;
         }
 
         .light-bg {

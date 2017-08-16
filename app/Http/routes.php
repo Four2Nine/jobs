@@ -34,3 +34,7 @@ Route::get('account/findPassword', function () {
 Route::get('account/index', function () {
     return view('account.index');
 });
+
+Route::get('position/applyList', function () {
+    return view('position.applyList');
+});
