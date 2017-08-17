@@ -19,14 +19,6 @@
             padding:0;
         }
 
-        .apply-empty {
-            text-align: center;
-            padding: 16px 0;
-            font-weight: 300;
-            color: var(--text-color-secondary);
-            font-size: 14px;
-        }
-
         .apply-item {
             padding:16px;
             height:50px;

@@ -5,6 +5,7 @@ body {
     --primary-color-dark: #232323;
     --text-color-primary: #232323;
     --text-color-secondary: #737373;
+    --text-color-light: #aaaaaa;
     --divider: #ebebeb;
     --white:#ffffff;
     --blue-sky: #03A9F4;
@@ -15,6 +16,10 @@ body {
     --tomato-dark: #D32F2F;
     --orange: #FF9800;
     --orange-dark: #F57C00;
+    --grap:#9C27B0;
+    --grap-dark: #7d2591;
+    --banana: #FFC107;
+    --banana-dark: #e1ac07;
 }
 
 .left, .right {
@@ -183,7 +188,7 @@ footer > .container > .right {
 }
 
 .button-link .mdl-ripple {
-    background: var(--blue-sky);
+    background: var(--text-color-secondary);
 }
 
 .button-border {
@@ -251,4 +256,13 @@ footer > .container > .right {
 
 .success-info {
     color: var(--cucumber);
+}
+
+.apply-empty,
+.position-empty{
+    text-align: center;
+    padding: 16px 0;
+    font-weight: 300;
+    color: var(--text-color-secondary);
+    font-size: 14px;
 }
