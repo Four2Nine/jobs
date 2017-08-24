@@ -3,10 +3,6 @@
 
 @section('custom-style')
     <style>
-        .info-panel {
-            margin: 20px 0;
-        }
-
         .info-card .mdl-card__title small{
             font-size: 10px;
             font-weight: 300;
@@ -21,7 +17,6 @@
 
         .apply-item {
             padding:16px;
-            height:50px;
             border-bottom: 1px solid var(--divider);
             cursor: pointer;
             -webkit-transition: all 0.4s ease;
@@ -59,37 +54,11 @@
 
 
 @section('header-nav')
-    <div class="header-nav">
-        <div class="container">
-            <!-- Title -->
-            <div class="header-nav-title">
-                <span class="nav-title"><?=$site_name ?></span>
-                <br>
-                <small><?=$site_desc ?></small>
-            </div>
-
-            <!-- Add spacer, to align navigation to the right -->
-            <!--<div class="spacer"></div>-->
-            <!-- Navigation -->
-            <nav class="nav">
-                <a href="">退出登录</a>
-                <a href="">企业合作</a>
-                <a href="">关于我们</a>
-            </nav>
-        </div>
-    </div>
+    @include('components.headerNav', ['isLogged' => true])
 @endsection
 
 @section('header-tab')
-    <div class="header-tab">
-        <div class="container">
-            <a href="" class="mdl-layout__tab">首页</a>
-            <a href="" class="mdl-layout__tab is-active">个人中心</a>
-            <a href="" class="mdl-layout__tab">职位搜索</a>
-            <a href="" class="mdl-layout__tab">资讯中心</a>
-            <div style="clear: both;"></div>
-        </div>
-    </div>
+    @include('components.headerTab', ['activeIndex' => 2])
 @endsection
 
 @section('content')

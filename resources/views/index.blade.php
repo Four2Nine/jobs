@@ -224,6 +224,14 @@
     </script>
 @endsection
 
+@section('header-nav')
+    @include('components.headerNav', ['isLogged' => false])
+@endsection
+
+@section('header-tab')
+    @include('components.headerTab', ['activeIndex' => 1])
+@endsection
+
 @section('content')
     <div class="header-post">
         <div class="container">

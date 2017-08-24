@@ -1,8 +1,5 @@
 @extends('layout.master')
 @section('title', '登录')
-@section('header-tab')
-@overwrite
-{{--这里隐藏了 tab--}}
 
 @section('custom-style')
     <style>
@@ -66,6 +63,10 @@
             padding-left: 30px;
         }
     </style>
+@endsection
+
+@section('header-nav')
+    @include('components.headerNav', ['isLogged' => false])
 @endsection
 
 @section('content')
