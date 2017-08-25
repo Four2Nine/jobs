@@ -68,6 +68,14 @@
             padding: 0 8px;
         }
 
+        .mdl-card__supporting-text a {
+            color: var(--text-color-primary);
+        }
+
+        .mdl-card__supporting-text a:hover{
+            text-decoration: underline;
+        }
+
     </style>
 @endsection
 
@@ -101,7 +109,7 @@
                              height="70px">
 
                         <div class="base-info__title">
-                            <p>刘洋</p>
+                            <p>Jobs</p>
                             <p><span>男</span> | <span>23岁</span> | <span>现居吉尔吉斯斯坦</span></p>
                         </div>
                     </div>
@@ -121,13 +129,13 @@
                         <li class="mdl-list__item">
                             <span class="mdl-list__item-primary-content">
                                 <i class="material-icons mdl-list__item-icon">phone</i>
-                                13258382770
+                                13267452667
                             </span>
                         </li>
                         <li class="mdl-list__item">
                             <span class="mdl-list__item-primary-content">
                                 <i class="material-icons mdl-list__item-icon">email</i>
-                                sealiu0217@gmail.com
+                                example@example.com
                             </span>
                         </li>
                     </ul>

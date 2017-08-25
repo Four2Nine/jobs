@@ -303,7 +303,6 @@
                                         <p>
                                             <span>查看简历</span>&nbsp;&nbsp;
                                             <span>发送消息</span>&nbsp;&nbsp;
-                                            <span>访问主页</span>&nbsp;&nbsp;
                                             <small>申请时间:2017-08-16</small>
                                         </p>
                                     </div>

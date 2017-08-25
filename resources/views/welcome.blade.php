@@ -21,6 +21,16 @@
             font-family: 'Lato';
         }
 
+        p i,
+        p a{
+            vertical-align: middle;
+        }
+
+        p i {
+            position: relative;
+            top:-2px;
+        }
+
         .container {
             text-align: center;
             display: table-cell;
@@ -97,8 +107,8 @@
 
         <p class="contents-title">News</p>
 
-        <p><a href="/news/index">/news/index&nbsp;&nbsp;新闻中心</a> <i class="material-icons"></i></p>
-        <p><a href="/news/detail">/news/index&nbsp;&nbsp;新闻详情</a> <i class="material-icons"></i></p>
+        <p><a href="/news/index">/news/index&nbsp;&nbsp;新闻中心</a> <i class="material-icons">check</i></p>
+        <p><a href="/news/detail">/news/index&nbsp;&nbsp;新闻详情</a> <i class="material-icons">check</i></p>
 
         <p class="contents-title">Message</p>
 
@@ -107,7 +117,7 @@
 
         <p class="contents-title">About</p>
 
-        <p><a href="/about/index">/news/index&nbsp;&nbsp;关于页面</a> <i class="material-icons"></i></p>
+        <p><a href="/about/index">/about/index&nbsp;&nbsp;关于页面</a> <i class="material-icons">check</i></p>
     </div>
 </div>
 </body>

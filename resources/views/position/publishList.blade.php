@@ -67,21 +67,6 @@
         .publish-item:hover {
             background-color: var(--divider);
         }
-
-        .search-position {
-            width:100%;
-            min-height: 0;
-            background-color: var(--snow);
-            padding: 6px 12px;
-        }
-        .search-position .form-line {
-            border:none;
-        }
-
-        .search-position .form-line input {
-            display: inline-block;
-            width: 320px;
-        }
     </style>
 @endsection
 

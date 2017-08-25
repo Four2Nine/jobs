@@ -3,6 +3,9 @@
 
 @section('custom-style')
     <style>
+        body {
+            background-color: var(--snow);
+        }
 
         .header-post {
             width: 100%;
@@ -113,7 +116,7 @@
         }
 
         /*.image_ad:hover .ad_info {*/
-            /*display: block;*/
+        /*display: block;*/
         /*}*/
 
         .image_ad > .ad_info > h5,
@@ -187,6 +190,10 @@
             padding-top: 45px;
         }
 
+        .news-panel {
+            padding-bottom: 40px;
+        }
+
         .news-panel ul {
             padding-left: 0;
         }
@@ -214,7 +221,7 @@
 
 @section('custom-script')
     <script type="text/javascript">
-        $(document).ready(function(){
+        $(document).ready(function () {
             $(".image_ad").mouseenter(function () {
                 $(this).find(".ad_info").show(300);
             }).mouseleave(function () {
@@ -275,185 +282,35 @@
             <div class="container">
 
                 <ul>
-                    <li>
-                        <div class="image_ad">
-                            <a href="#">
-                                <img src={{asset('images/welcome_card.jpg')}} width="330" height="150">
-                            </a>
+                    @foreach([1,2,3,4,5,6] as $bigImgAd)
+                        <li @if($bigImgAd%3 === 0) class="none_margin" @endif>
+                            <div class="image_ad">
+                                <a href="#">
+                                    <img src={{asset('images/welcome_card.jpg')}} width="330" height="150">
+                                </a>
 
-                            <div class="ad_info">
-                                <h5>公司名称</h5>
-                                <p>公司简介</p>
+                                <div class="ad_info">
+                                    <h5>公司名称</h5>
+                                    <p>公司简介</p>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="image_ad">
-                            <a href="#">
-                                <img src={{asset('images/welcome_card.jpg')}} width="330" height="150">
-                            </a>
-
-                            <div class="ad_info">
-                                <h5>公司名称</h5>
-                                <p>公司简介</p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="none_margin">
-                        <div class="image_ad">
-                            <a href="#">
-                                <img src={{asset('images/welcome_card.jpg')}} width="330" height="150">
-                            </a>
-
-                            <div class="ad_info">
-                                <h5>公司名称</h5>
-                                <p>公司简介</p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="image_ad">
-                            <a href="#">
-                                <img src={{asset('images/welcome_card.jpg')}} width="330" height="150">
-                            </a>
-
-                            <div class="ad_info">
-                                <h5>公司名称</h5>
-                                <p>公司简介</p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="image_ad">
-                            <a href="#">
-                                <img src={{asset('images/welcome_card.jpg')}} width="330" height="150">
-                            </a>
-
-                            <div class="ad_info">
-                                <h5>公司名称</h5>
-                                <p>公司简介</p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="none_margin">
-                        <div class="image_ad">
-                            <a href="#">
-                                <img src={{asset('images/welcome_card.jpg')}} width="330" height="150">
-                            </a>
-
-                            <div class="ad_info">
-                                <h5>公司名称</h5>
-                                <p>公司简介</p>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
+                    @endforeach
 
                     {{--small size image ad--}}
                     <div style="margin-top: 40px;"></div>
-
-                    <li>
-                        <div class="image_ad">
-                            <a href="#">
-                                <img src={{asset('images/house.jpg')}} width="330" height="100">
-                            </a>
-                            <div class="ad_info">
-                                <h6>公司名称</h6>
+                    @foreach([1,2,3,4,5,6,7,8,9] as $smallImgAd)
+                        <li @if($smallImgAd%3 === 0) class="none_margin" @endif>
+                            <div class="image_ad">
+                                <a href="#">
+                                    <img src={{asset('images/house.jpg')}} width="330" height="100">
+                                </a>
+                                <div class="ad_info">
+                                    <h6>公司名称</h6>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="image_ad">
-                            <a href="#">
-                                <img src={{asset('images/house.jpg')}} width="330" height="100">
-                            </a>
-                            <div class="ad_info">
-                                <h6>公司名称</h6>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="none_margin">
-                        <div class="image_ad">
-                            <a href="#">
-                                <img src={{asset('images/house.jpg')}} width="330" height="100">
-                            </a>
-                            <div class="ad_info">
-                                <h6>公司名称</h6>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="image_ad">
-                            <a href="#">
-                                <img src={{asset('images/house.jpg')}} width="330" height="100">
-                            </a>
-                            <div class="ad_info">
-                                <h6>公司名称</h6>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="image_ad">
-                            <a href="#">
-                                <img src={{asset('images/house.jpg')}} width="330" height="100">
-                            </a>
-                            <div class="ad_info">
-                                <h6>公司名称</h6>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="none_margin">
-                        <div class="image_ad">
-                            <a href="#">
-                                <img src={{asset('images/house.jpg')}} width="330" height="100">
-                            </a>
-                            <div class="ad_info">
-                                <h6>公司名称</h6>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="image_ad">
-                            <a href="#">
-                                <img src={{asset('images/house.jpg')}} width="330" height="100">
-                            </a>
-                            <div class="ad_info">
-                                <h6>公司名称</h6>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="image_ad">
-                            <a href="#">
-                                <img src={{asset('images/house.jpg')}} width="330" height="100">
-                            </a>
-                            <div class="ad_info">
-                                <h6>公司名称</h6>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="none_margin">
-                        <div class="image_ad">
-                            <a href="#">
-                                <img src={{asset('images/house.jpg')}} width="330" height="100">
-                            </a>
-                            <div class="ad_info">
-                                <h6>公司名称</h6>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
+                    @endforeach
                 </ul>
                 <div style="clear: both;"></div>
             </div>
@@ -462,175 +319,16 @@
 
             <div class="light-bg">
                 <div class="container">
-
                     <ul>
-                        <li>
-                            <div class="word_ad">
-                                <div class="ad_info">
-                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                        @for ($i = 1; $i <= 21; $i++)
+                            <li @if($i%3 === 0) class="none_margin" @endif>
+                                <div class="word_ad">
+                                    <div class="ad_info">
+                                        <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="word_ad">
-                                <div class="ad_info">
-                                    <h6><a href="#">小牛普惠昆明分公司 (昆明市)</a></h6>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="none_margin">
-                            <div class="word_ad">
-                                <div class="ad_info">
-                                    <h6><a href="#">广州壬泰实业投资有限公司 (广东省)</a></h6>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="word_ad">
-                                <div class="ad_info">
-                                    <h6><a href="#">盛世创富证券投资顾问有限公司广州公司 (广州市)</a></h6>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="word_ad">
-                                <div class="ad_info">
-                                    <h6><a href="#">尚智逢源基金销售有限公司上海分公司 (上海)</a></h6>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="none_margin">
-                            <div class="word_ad">
-                                <div class="ad_info">
-                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="word_ad">
-                                <div class="ad_info">
-                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="word_ad">
-                                <div class="ad_info">
-                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="none_margin">
-                            <div class="word_ad">
-                                <div class="ad_info">
-                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="word_ad">
-                                <div class="ad_info">
-                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="word_ad">
-                                <div class="ad_info">
-                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="none_margin">
-                            <div class="word_ad">
-                                <div class="ad_info">
-                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="word_ad">
-                                <div class="ad_info">
-                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="word_ad">
-                                <div class="ad_info">
-                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="none_margin">
-                            <div class="word_ad">
-                                <div class="ad_info">
-                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="word_ad">
-                                <div class="ad_info">
-                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="word_ad">
-                                <div class="ad_info">
-                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="none_margin">
-                            <div class="word_ad">
-                                <div class="ad_info">
-                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="word_ad">
-                                <div class="ad_info">
-                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="word_ad">
-                                <div class="ad_info">
-                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="none_margin">
-                            <div class="word_ad">
-                                <div class="ad_info">
-                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
+                        @endfor
                     </ul>
                     <div style="clear: both;"></div>
                 </div>
@@ -649,188 +347,22 @@
                     </h4>
                 </div>
 
-
                 <ul>
-                    <li>
-                        <div class="word_ad">
-                            <div class="ad_info">
-                                <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                <p>
-                                    <small><b>急聘: </b><a href="#"><b>市场专员</b></a></small>
-                                </p>
+                    @for ($i = 1; $i <= 12; $i++)
+                        <li @if($i%3 === 0) class="none_margin" @endif>
+                            <div class="word_ad">
+                                <div class="ad_info">
+                                    <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
+                                    <p>
+                                        <small><b>急聘: </b><a href="#"><b>市场专员</b></a></small>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="word_ad">
-                            <div class="ad_info">
-                                <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                <p>
-                                    <small><b>急聘: </b><a href="#"><b>市场专员</b></a></small>
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="none_margin">
-                        <div class="word_ad">
-                            <div class="ad_info">
-                                <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                <p>
-                                    <small><b>急聘: </b><a href="#"><b>市场专员</b></a></small>
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="word_ad">
-                            <div class="ad_info">
-                                <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                <p>
-                                    <small><b>急聘: </b><a href="#"><b>市场专员</b></a></small>
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="word_ad">
-                            <div class="ad_info">
-                                <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                <p>
-                                    <small><b>急聘: </b><a href="#"><b>市场专员</b></a></small>
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="none_margin">
-                        <div class="word_ad">
-                            <div class="ad_info">
-                                <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                <p>
-                                    <small><b>急聘: </b><a href="#"><b>市场专员</b></a></small>
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="word_ad">
-                            <div class="ad_info">
-                                <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                <p>
-                                    <small><b>急聘: </b><a href="#"><b>市场专员</b></a></small>
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="word_ad">
-                            <div class="ad_info">
-                                <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                <p>
-                                    <small><b>急聘: </b><a href="#"><b>市场专员</b></a></small>
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="none_margin">
-                        <div class="word_ad">
-                            <div class="ad_info">
-                                <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                <p>
-                                    <small><b>急聘: </b><a href="#"><b>市场专员</b></a></small>
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="word_ad">
-                            <div class="ad_info">
-                                <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                <p>
-                                    <small><b>急聘: </b><a href="#"><b>市场专员</b></a></small>
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="word_ad">
-                            <div class="ad_info">
-                                <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                <p>
-                                    <small><b>急聘: </b><a href="#"><b>市场专员</b></a></small>
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="none_margin">
-                        <div class="word_ad">
-                            <div class="ad_info">
-                                <h6><a href="#">广州市花都万穗小额贷款股份有限公司</a></h6>
-                                <p>
-                                    <small><b>急聘: </b><a href="#"><b>市场专员</b></a></small>
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-
+                        </li>
+                    @endfor
                 </ul>
+
                 <div style="clear: both;"></div>
-
-                {{--<div class="position-card mdl-card mdl-shadow--2dp" style="height: 120px;">--}}
-                {{--<div class="mdl-card__title">--}}
-                {{--<h2 class="mdl-card__title-text">职位名称1</h2>--}}
-                {{--</div>--}}
-                {{--<div class="mdl-card__supporting-text">--}}
-                {{--Lorem ipsum dolor sit amet, consectetur adipiscing elit.--}}
-                {{--Aenan convallis.Lorem ipsum dolor sit amet, consectetur adipiscing elit.--}}
-                {{--Aenan convallis.--}}
-                {{--</div>--}}
-                {{--<div class="mdl-card__actions mdl-card--border">--}}
-                {{--<a class="mdl-button mdl-js-button mdl-js-ripple-effect button-link">--}}
-                {{--查看详情--}}
-                {{--</a>--}}
-                {{--</div>--}}
-                {{--</div>--}}
-
-                {{--<div class="position-card mdl-card mdl-shadow--2dp">--}}
-                {{--<div class="mdl-card__title">--}}
-                {{--<h2 class="mdl-card__title-text">职位名称2</h2>--}}
-                {{--</div>--}}
-                {{--<div class="mdl-card__supporting-text">--}}
-                {{--Lorem ipsum dolor sit amet, consectetur adipiscing elit.--}}
-                {{--Aenan convallis.--}}
-                {{--</div>--}}
-                {{--<div class="mdl-card__actions mdl-card--border">--}}
-                {{--<a class="mdl-button mdl-js-button mdl-js-ripple-effect button-link">--}}
-                {{--查看详情--}}
-                {{--</a>--}}
-                {{--</div>--}}
-                {{--</div>--}}
-
-                {{--<div class="position-card mdl-card mdl-shadow--2dp">--}}
-                {{--<div class="mdl-card__title">--}}
-                {{--<h2 class="mdl-card__title-text">职位名称3</h2>--}}
-                {{--</div>--}}
-                {{--<div class="mdl-card__supporting-text">--}}
-                {{--Lorem ipsum dolor sit amet, consectetur adipiscing elit.--}}
-                {{--Aenan convallis.--}}
-                {{--</div>--}}
-                {{--<div class="mdl-card__actions mdl-card--border">--}}
-                {{--<a class="mdl-button mdl-js-button mdl-js-ripple-effect button-link">--}}
-                {{--查看详情--}}
-                {{--</a>--}}
-                {{--</div>--}}
-                {{--</div>--}}
             </div>
         </div>
 

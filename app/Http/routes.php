@@ -70,3 +70,24 @@ Route::get('resume/add', function () {
 Route::get('resume/preview', function () {
     return view('resume.preview');
 });
+
+Route::get('news/', function () {
+    return view('news.index');
+});
+
+Route::get('news/index', function () {
+    return view('news.index');
+});
+
+Route::get('news/detail', function () {
+    return view('news.detail');
+});
+
+
+Route::get('about/', function () {
+    return view('about.index');
+});
+
+Route::get('about/index', function () {
+    return view('about.index');
+});

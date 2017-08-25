@@ -19,9 +19,9 @@
         @endif
 
         @if($activeIndex === 4)
-            <a href="" class="mdl-layout__tab is-active">资讯中心</a>
+            <a href="/news/" class="mdl-layout__tab is-active">资讯中心</a>
         @else
-            <a href="" class="mdl-layout__tab">资讯中心</a>
+            <a href="/news/" class="mdl-layout__tab">资讯中心</a>
         @endif
         <div style="clear: both;"></div>
     </div>

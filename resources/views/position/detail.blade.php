@@ -4,9 +4,6 @@
 
 @section('custom-style')
     <style>
-        h6{
-            margin:0;
-        }
 
         .mdl-card__menu label {
             vertical-align: middle;
@@ -61,8 +58,7 @@
             margin-left: 6px;
         }
 
-        .position-card .mdl-card__actions,
-        .base-info--panel {
+        .position-card .mdl-card__actions {
             background-color: var(--divider-light);
         }
 
