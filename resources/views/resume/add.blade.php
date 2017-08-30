@@ -385,7 +385,7 @@
                 @include('components.baseUserProfile', ['isShowFunctionPanel' => false])
 
                 <div class="button-panel left">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-blue-sky">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-blue-sky" to="/resume/preview">
                         预览简历
                     </button>
                 </div>

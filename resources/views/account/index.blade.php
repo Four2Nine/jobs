@@ -153,18 +153,6 @@
     </style>
 @endsection
 
-@section('custom-script')
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.resume-item').mouseenter(function () {
-                $(this).addClass("resume-bg");
-            }).mouseleave(function () {
-                $(this).removeClass("resume-bg");
-            });
-        });
-    </script>
-@endsection
-
 @section('header-nav')
     @include('components.headerNav', ['isLogged' => true])
 @endsection
@@ -186,17 +174,17 @@
 
                     <div class="mdl-card__actions mdl-card--border resume-panel">
                         <div class="resume-item">
-                            <a href="/resume/preview"><img src="{{asset('images/resume.png')}}" width="100px"/></a>
+                            <a to="/resume/preview"><img src="{{asset('images/resume.png')}}" width="100px"/></a>
                             <p>简历名称1</p>
                         </div>
 
                         <div class="resume-item">
-                            <a href="/resume/preview"><img src="{{asset('images/resume.png')}}" width="100px"/></a>
+                            <a to="/resume/preview"><img src="{{asset('images/resume.png')}}" width="100px"/></a>
                             <p>简历名称2</p>
                         </div>
 
                         <div class="resume-item">
-                            <a href="/resume/add"><img src="{{asset('images/resume_add.png')}}" width="100px"/></a>
+                            <a to="/resume/add"><img src="{{asset('images/resume_add.png')}}" width="100px"/></a>
                             <p>添加简历</p>
                         </div>
                     </div>
@@ -244,8 +232,8 @@
 
                         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
                             for="demo-menu-lower-right">
-                            <li class="mdl-menu__item"><a href="/position/publish">发布职位</a></li>
-                            <li class="mdl-menu__item"><a href="/position/publishList">查看所有</a></li>
+                            <li class="mdl-menu__item" to="/position/publish">发布职位</li>
+                            <li class="mdl-menu__item" to="/position/publishList">查看所有</li>
                         </ul>
                     </div>
 
@@ -280,7 +268,7 @@
 
                     <div class="mdl-card__menu">
 
-                        <button class="mdl-button mdl-js-button mdl-button--icon" id="check-all">
+                        <button class="mdl-button mdl-js-button mdl-button--icon" id="check-all" to="/position/applyList">
                             <i class="material-icons">list</i>
                         </button>
 
@@ -332,4 +320,14 @@
 
         </div>
     </div>
+@endsection
+
+@section('custom-script')
+    <script type="text/javascript">
+        $('.resume-item').mouseenter(function () {
+            $(this).addClass("resume-bg");
+        }).mouseleave(function () {
+            $(this).removeClass("resume-bg");
+        });
+    </script>
 @endsection

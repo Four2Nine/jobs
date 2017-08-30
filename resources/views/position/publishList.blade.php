@@ -88,20 +88,21 @@
                     </div>
 
                     <div class="mdl-card__menu">
-                        <button class="mdl-button mdl-button--icon mdl-js-button" id="sort-position">
-                            <i class="material-icons">sort</i>
-                        </button>
 
                         <button class="mdl-button mdl-button--icon mdl-js-button" id="publish-position">
                             <i class="material-icons">add</i>
                         </button>
 
-                        <div class="mdl-tooltip" data-mdl-for="sort-position">
-                            选择排序方法
-                        </div>
+                        <button class="mdl-button mdl-button--icon mdl-js-button" id="sort-position">
+                            <i class="material-icons">sort</i>
+                        </button>
 
                         <div class="mdl-tooltip" data-mdl-for="publish-position">
                             发布新职位
+                        </div>
+
+                        <div class="mdl-tooltip" data-mdl-for="sort-position">
+                            选择排序方法
                         </div>
 
                         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"

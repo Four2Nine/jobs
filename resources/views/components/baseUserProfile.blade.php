@@ -11,7 +11,7 @@
     </div>
 
     <div class="mdl-card__menu">
-        <button class="mdl-button mdl-button--icon mdl-js-button" id="update-profile-user">
+        <button class="mdl-button mdl-button--icon mdl-js-button" id="update-profile-user" to="/account/edit">
             <i class="material-icons">mode_edit</i>
         </button>
 
@@ -50,12 +50,12 @@
         <div style="clear: both;"></div>
 
         <div class="mdl-card__actions mdl-card--border base-info--user__functions">
-            <span class="mdl-chip mdl-chip--contact">
+            <span class="mdl-chip mdl-chip--contact" to="/position/applyList">
                 <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">9+</span>
                 <span class="mdl-chip__text">申请记录</span>
             </span>
 
-            <span class="mdl-chip mdl-chip--contact">
+            <span class="mdl-chip mdl-chip--contact" to="/message/">
                 <span class="mdl-chip__contact mdl-color--green mdl-color-text--white">9+</span>
                 <span class="mdl-chip__text">站内信</span>
             </span>

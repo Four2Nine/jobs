@@ -61,6 +61,12 @@
 <script src="{{asset('js/jquery-3.2.1.js')}}"></script>
 <script src="{{asset('plugins/bootstrap/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('js/material.js')}}"></script>
+<script type="text/javascript">
+    $("*[to]").click(function () {
+        self.location = $(this).attr('to');
+    })
+</script>
+
 @section('custom-script')
 @show
 </body>

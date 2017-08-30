@@ -96,7 +96,7 @@
         <p><a href="/position/applyList">/position/applyList&nbsp;&nbsp;申请记录</a> <i class="material-icons">check</i></p>
         <p><a href="/position/detail">/position/detail&nbsp;&nbsp;职位详情</a> <i class="material-icons">check</i></p>
         <p><a href="/position/publishList">/position/detail&nbsp;&nbsp;已发布职位列表</a> <i class="material-icons">check</i></p>
-        <p><a href="/position/publish">/position/detail&nbsp;&nbsp;发布职位</a> <i class="material-icons"></i></p>
+        <p><a href="/position/publish">/position/detail&nbsp;&nbsp;发布职位</a> <i class="material-icons">check</i></p>
         <p><a href="/position/advanceSearch">/position/advanceSearch&nbsp;&nbsp;职位搜索</a> <i class="material-icons"></i></p>
 
 
@@ -112,8 +112,8 @@
 
         <p class="contents-title">Message</p>
 
-        <p><a href="/message/index">/news/index&nbsp;&nbsp;消息列表</a> <i class="material-icons"></i></p>
-        <p><a href="/message/detail">/news/index&nbsp;&nbsp;消息详情</a> <i class="material-icons"></i></p>
+        <p><a href="/message/index">/message/index&nbsp;&nbsp;消息列表</a> <i class="material-icons">check</i></p>
+        <p><a href="/message/detail">/message/detail&nbsp;&nbsp;消息详情</a> <i class="material-icons">check</i></p>
 
         <p class="contents-title">About</p>
 

@@ -63,6 +63,10 @@ Route::get('position/detail', function () {
     return view('position.detail');
 });
 
+Route::get('position/advanceSearch', function () {
+    return view('position.advanceSearch');
+});
+
 Route::get('resume/add', function () {
     return view('resume.add');
 });
@@ -90,4 +94,16 @@ Route::get('about/', function () {
 
 Route::get('about/index', function () {
     return view('about.index');
+});
+
+Route::get('message/', function () {
+    return view('message.index');
+});
+
+Route::get('message/index', function () {
+    return view('message.index');
+});
+
+Route::get('message/detail', function () {
+    return view('message.detail');
 });

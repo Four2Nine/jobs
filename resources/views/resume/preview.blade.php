@@ -69,6 +69,7 @@
         }
 
         .mdl-card__supporting-text a {
+            cursor: pointer;
             color: var(--text-color-primary);
         }
 
@@ -96,7 +97,7 @@
                 </div>
 
                 <div class="mdl-card__supporting-text">
-                    以下简历为效果预览，不满意？<a href="#">点击修改</a>
+                    以下简历为效果预览，不满意？<a to="/resume/add">返回修改</a>
                 </div>
             </div>
 
