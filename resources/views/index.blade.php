@@ -19,7 +19,7 @@
 
         .search-box input {
             width: 500px;
-            height: 25px;
+            height: 43px;
             padding: 10px 10px;
             border: none;
             font-size: 16px;
@@ -28,6 +28,8 @@
 
         .search-box button {
             font-weight: 300;
+            position: relative;
+            top:-3px;
         }
 
         .search-box-appendix {

@@ -2,11 +2,13 @@
 @section('title', '注册')
 
 @section('custom-style')
+    <link rel="stylesheet" type="text/css" href="{{asset('plugins/bootstrap-select/css/bootstrap-select.min.css')}}">
+
     <style>
 
         .register-card-holder {
             width: 100%;
-            min-height:450px;
+            min-height: 450px;
             background: url({{asset('images/akali_vs_baron_3.jpg')}}) no-repeat center;
             -webkit-background-size: cover;
             -moz-background-size: cover;
@@ -48,8 +50,13 @@
             border-right: 1px solid #4d4d4d;
         }
 
-        .register-input {
-            display: block;
+        #phone-verify-code .form-line {
+            position: relative;
+        }
+
+        #phone-verify-code .form-line a {
+            position: absolute;
+            right: 0;
         }
 
         #register-verify-code {
@@ -60,6 +67,19 @@
         #right-panel {
             width: 365px;
             padding-left: 30px;
+        }
+
+        .form-group {
+            width: 340px;
+        }
+
+        .form-group .form-line input {
+            background-color: transparent;
+        }
+
+        #right-panel a {
+            color: var(--blue-sky);
+            text-decoration: underline;
         }
     </style>
 @endsection
@@ -82,33 +102,38 @@
                 <tr>
                     <td>
                         <form action="#" class="register-form">
-                            <div class="register-input mdl-textfield mdl-js-textfield">
-                                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
-                                       id="register-input-phone">
-                                <label class="mdl-textfield__label" for="register-input-phone">手机号...</label>
-                                <span class="mdl-textfield__error">请输入正确的手机号!</span>
-                                {{--<a class="use-email-register" href="">使用邮箱注册</a>--}}
+
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="text" id="phone" name="phone" class="form-control"
+                                           placeholder="手机号...">
+                                </div>
+                                <label class="error" for="phone"></label>
                             </div>
 
-                            <div class="register-input mdl-textfield mdl-js-textfield" id="phone-verify-code">
-                                <input class="mdl-textfield__input" type="text" id="register-verify-code">
-                                <button class="mdl-button mdl-js-button mdl-button-default button-border">发送验证码</button>
-                                <label class="mdl-textfield__label" for="register-verify-code">验证码...</label>
-                                <span class="mdl-textfield__error">请输入格式正确的验证码!</span>
+                            <div class="form-group" id="phone-verify-code">
+                                <div class="form-line">
+                                    <input type="text" id="register-verify-code" name="verify-code" class="form-control"
+                                           placeholder="验证码...">
+                                    <a class="mdl-button mdl-js-button mdl-button-default button-border">发送验证码</a>
+                                </div>
+                                <label class="error" for="register-verify-code"></label>
                             </div>
 
-                            <div class="register-input mdl-textfield mdl-js-textfield">
-                                <input class="mdl-textfield__input" type="password" pattern=""
-                                       id="register-input-password">
-                                <label class="mdl-textfield__label" for="register-input-password">密码...</label>
-                                <span class="mdl-textfield__error"></span>
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="password" id="password" name="password" class="form-control"
+                                           placeholder="密码...">
+                                </div>
+                                <label class="error" for="password"></label>
                             </div>
 
-                            <div class="register-input mdl-textfield mdl-js-textfield">
-                                <input class="mdl-textfield__input" type="password" pattern=""
-                                       id="register-confirm-password">
-                                <label class="mdl-textfield__label" for="register-confirm-password">确认密码...</label>
-                                <span class="mdl-textfield__error"></span>
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="password" id="password" name="password" class="form-control"
+                                           placeholder="确认密码...">
+                                </div>
+                                <label class="error" for="password"></label>
                             </div>
 
                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-blue-sky">
@@ -118,8 +143,13 @@
                     </td>
                     <td>
                         <div id="right-panel">
-                            <p>你还可以使用邮箱来注册 esporthr <a href="#">立即使用邮箱注册</a></p>
-                            <p>已经有账号了？<a href="#">立即登录</a></p>
+                            <p>你还可以使用邮箱来注册 esporthr <a href="#">使用邮箱注册</a></p>
+                            <p>已经有账号了？
+                                <button to="/account/login"
+                                        class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-blue-sky">
+                                    立即登录
+                                </button>
+                            </p>
                         </div>
                     </td>
                 </tr>
@@ -128,4 +158,18 @@
     </div>
 
 
+@endsection
+
+@section('custom-script')
+    <script src="{{asset('plugins/bootstrap-select/js/bootstrap-select.min.js')}}"></script>
+
+    <script type="text/javascript">
+
+        $(".form-control").focus(function () {
+            $(this.parentNode).addClass("focused");
+        }).blur(function () {
+            $(this.parentNode).removeClass("focused");
+        });
+
+    </script>
 @endsection
