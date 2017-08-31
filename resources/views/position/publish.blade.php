@@ -279,33 +279,27 @@
         });
 
         $("#position-salary").ionRangeSlider({
-            type: "text",
             grid: true,
-            values:["0k", "2k", "4k", "8k", "16k", "32k", "64k", "128k"],
             from: 2,
-            to: 3,
+            values:["0k", "3k", "5k", "10k", "15k", "20k", "25k", "50k+"],
         });
 
         $("#position-person--number").ionRangeSlider({
             min:1,
             max:50,
-            from:5
+            from:10
         });
 
         $("#position-experience").ionRangeSlider({
-            type:"text",
             grid:true,
+            from:1,
             values:["1年", "2年", "3年", "5年", "5年以上"],
-            from:0,
-            to:1
         });
 
         $("#position-education").ionRangeSlider({
-            type:"text",
             grid:true,
-            values:["高中", "大专", "本科", "硕士研究生及以上"],
             from:1,
-            to:3
+            values:["高中", "大专", "本科", "硕士研究生及以上"],
         });
 
 
